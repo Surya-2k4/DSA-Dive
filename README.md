@@ -1,2 +1,2 @@
 # DSA-Dive
-🔗 Mastering DSA concepts, one step at a time!💡💻
+🚀 Journey through DSA concepts, mastering one by one, with code implementations and insights shared here! 💻💡
