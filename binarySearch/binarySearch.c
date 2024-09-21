@@ -10,7 +10,7 @@ int binarySearch(int arr[],int target,int size){
     int left=0, right=size - 1;  
     
     while(left <= right){
-    int mid=left+(left+right)/2; // Avoid potential overflow
+    int mid=left+(right-left)/2; // Avoid potential overflow
     
     if(target == mid){
         return mid;  // Target found at index mid
@@ -22,7 +22,7 @@ int binarySearch(int arr[],int target,int size){
         right = mid -1;  //  Search in the left half (left)
     }
     }
-    return -1;
+    return -1;  //target not found
 }
 
 //for performing the binarySearch need to sort the array
