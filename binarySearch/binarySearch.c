@@ -21,8 +21,9 @@ int binarySearch(int arr[],int target,int size){
     else{
         right = mid -1;  //  Search in the left half (left)
     }
+        return -1;
     }
-    return -1;  //target not found
+      //target not found
 }
 
 //for performing the binarySearch need to sort the array
