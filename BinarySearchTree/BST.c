@@ -11,7 +11,7 @@ struct bst
 
 void insert();
 //void delete();
-//void inorderTraversal(struct bst *t);
+void inorderTraversal(struct bst *t);
 void create();
 void search();
 
@@ -23,7 +23,7 @@ void main()
     printf("Operations...\n");
     printf("\n1-Insert\n2-Delete\n3-Inorder Traversal\n4-Preorder Traversal\n5-Postorder Traversal\n6-Exit\n");
     while(1){
-        printf("Enter your choice :");
+        printf("\nEnter your choice :");
         scanf("%d",&ch);
         switch(ch){
             case 1: 
@@ -33,7 +33,7 @@ void main()
                 //delete();
                 break;
             case 3:
-                //inorderTraversal();
+                inorderTraversal(root);
                 break;
             case 4:
                // preorderTraversal();
@@ -81,3 +81,18 @@ void main()
     else if((temp->value < t->value)&& (t->l==NULL))
     t->l=temp;
  }
+ 
+ //Recursive function to perform inorderTraversal of tree
+ void inorderTraversal(struct bst *t){
+     if(root==NULL){
+        printf("\nNo Elements to display.\n");
+        return;
+     }
+     if(t->l !=NULL)
+        inorderTraversal(t->l);
+    printf("%d->",t->value);
+    if(t->r!=NULL)
+        inorderTraversal(t->r);
+        return;
+ }
+ 
