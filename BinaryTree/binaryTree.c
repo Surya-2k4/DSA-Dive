@@ -1,3 +1,5 @@
+//Write a function to im lement re-order in-order and ost-order traversals of a bina tree.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,30 +14,23 @@ void preorderTraversal(struct Node* root) {
     // Base case
     if (root == NULL)
         return;
-  
     // Visit the current node
     printf("%d ", root->data);
-  
     // Recur on the left subtree
     preorderTraversal(root->left);
-  
     // Recur on the right subtree
     preorderTraversal(root->right);
 }
 
 // Function to perform inorder traversal
 void inorderTraversal(struct Node* root) {
-  
     // Empty Tree
     if (root == NULL)
         return;
-  
     // Recur on the left subtree
     inorderTraversal(root->left);
-  
     // Visit the current node
     printf("%d ", root->data);
-  
     // Recur on the right subtree
     inorderTraversal(root->right);
 }
@@ -46,13 +41,10 @@ void postorderTraversal(struct Node* node) {
     // Base case
     if (node == NULL)
         return;
-  
     // Recur on the left subtree
     postorderTraversal(node->left);
-  
     // Recur on the right subtree
     postorderTraversal(node->right);
-  
     // Visit the current node
     printf("%d ", node->data);
 }
