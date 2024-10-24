@@ -1,3 +1,5 @@
+//Program to illustrate the implementation of Insert, Delete and Searching operations on a binary search tree.
+
 #include <stdio.h>
 #include <stdlib.h>
 
